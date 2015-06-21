@@ -6,12 +6,13 @@ $(document).ready(function() {
 		},
 		"columns": [
 			{ "data": "position", "render": function (data,type,row) { return '<img src="img/HashMark.png" height="14" width="14"></img> ' + (data) +''; } },
-			{ "data": "name", "render": function (data,type,row) { return '<img src="img/'+ (data).toLowerCase() +'.png" height="18" width="18"></img> ' + (data) +''; } },
+			{ "data": "name", "render": function (data,type,row) { return '<img src="img/'+ (data).toLowerCase().split(" ")[0].replace(" ", "") +'.png" height="18" width="18"></img> ' + (data) +''; } },
                         { "data": "symbol" },
                         { "data": "marketCap.usd", "render": function (data,type,row) { return '<span style="font-size:12px;" class="glyphicon glyphicon-usd"></span> ' + Number(data).toLocaleString() +''; } },
                         { "data": "price.usd", "render": function (data,type,row) { return '<span style="font-size:12px;" class="glyphicon glyphicon-usd"></span> ' + Number(data).toFixed(8) +''; } },
                         { "data": "price.btc", "render": function (data,type,row) { return '<span style="font-size:12px;color:orange;" class="glyphicon glyphicon-bitcoin"></span> ' + Number(data).toFixed(8) +''; } },
-                        { "data": "volume24.btc", "render": function (data,type,row) { return '<span style="font-size:12px;color:orange;" class="glyphicon glyphicon-bitcoin"></span> ' + Number(data).toFixed(2) +''; } }
+                        { "data": "availableSupply" },
+                        { "data": "volume24.btc", "render": function (data,type,row) { return '<span style="font-size:12px;color:orange;" class="glyphicon glyphicon-bitcoin"></span> ' + Number(data).toLocaleString() +''; } }
                 ],
                 "dom": 'T<"clear">lfrtip',
                 "tableTools": {

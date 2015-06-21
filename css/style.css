@@ -16,8 +16,9 @@ body.dt-example-bootstrap {
 	line-height: 1.42857143;
 }
 
+
 div.container {
-	max-width: 980px;
+	max-width: 1100px;
 	margin: 0 auto;
 }
 
