@@ -18,7 +18,7 @@ body.dt-example-bootstrap {
 
 
 div.container {
-	max-width: 1100px;
+	max-width: 100%;
 	margin: 0 auto;
 }
 
