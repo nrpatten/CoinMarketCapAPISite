@@ -16,7 +16,7 @@ Setup:
 
 `git clone https://github.com/nrpatten/CoinMarketCapAPISite.git coinmarketcap`
 
-`cd json`
+`cd coinmarketcap/json`
 
 `chmod +x check.sh`
 
