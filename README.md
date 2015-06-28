@@ -11,6 +11,7 @@
 Note PHP5 must be used to run PHP Simple html Dom.
 
 Setup:
+
 `cd /var/www`
 
 `git clone https://github.com/nrpatten/CoinMarketCapAPISite.git coinmarketcap`
