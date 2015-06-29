@@ -6,7 +6,7 @@ $(document).ready(function() {
          "emptyTable": "The table is still loading data or there was an error with JSON"
       },
       "ajax": {
-         "url": "json/markets.json",
+         "url": "json/all.json",
          "dataSrc": "markets",
          "dataType": "json"
       },
@@ -18,16 +18,16 @@ $(document).ready(function() {
          },
          { "data": null,
             "render": function ( data, type, row ) { 
-              return '<img src="http://coinmarketcap.com/static/img/coins/16x16/'+ (data.logo) +'" height="18" width="18"></img> ' + (data.name) +' '; 
+              return '<img src="http://coinmarketcap.com/static/img/coins/16x16/'+ (data.icon) +'" height="18" width="18"></img> ' + (data.name) +' '; 
             } 
          },
          { "data": "symbol" },
-         { "data": "marketcap_usd",
+         { "data": "market_cap.usd",
             "render": function ( data, type, row ) { 
               return '<span style="font-size:12px;" class="glyphicon glyphicon-usd"></span> ' + Number(data).toLocaleString() +' ';
             } 
          },
-         { "data": "price_usd",
+         { "data": "price.usd",
             "render": function ( data, type, row ) {
               if ( data > 1 ) { return '<span style="font-size:12px;" class="glyphicon glyphicon-usd"></span> ' + Number(data) +' ';
               } else {
@@ -35,15 +35,20 @@ $(document).ready(function() {
                }
             }
          },
+         { "data": "price.btc",
+            "render": function(data, type, row) {
+              return '<span style="font-size:12px;color:orange;" class="glyphicon glyphicon-bitcoin"></span> ' + Number(data).toFixed(8) + ' ';
+            }
+         }, 
          { "data": null,
             "render": function ( data, type, row ) {
-              if ( data.supply_btc > 1 ) { return '<img src="http://coinmarketcap.com/static/img/coins/16x16/'+ (data.logo) +'" height="18" width="18"></img> ' + Number(data.supply_btc).toLocaleString() +' ';
+              if ( data.supply > 1 ) { return '<img src="http://coinmarketcap.com/static/img/coins/16x16/'+ (data.icon) +'" height="18" width="18"></img> ' + Number(data.supply).toLocaleString() +' ';
               } else {
-               return '<img src="http://coinmarketcap.com/static/img/coins/16x16/'+ (data.logo) +'" height="18" width="18"></img> ' + Number(data.supply_btc).toFixed(8) +' ';
+               return '<img src="http://coinmarketcap.com/static/img/coins/16x16/'+ (data.logo) +'" height="18" width="18"></img> ' + Number(data.supply).toFixed(8) +' ';
                }
             }
          },
-         { "data": "volume_usd",
+         { "data": "volume.usd",
             "render": function ( data, type, row ) {
               return '<span style="font-size:12px;" class="glyphicon glyphicon-usd"></span> ' + Number(data).toLocaleString() +' ';
             }
@@ -64,7 +69,7 @@ $(document).ready(function() {
                }
             }
          },
-         { "data": "change1d",
+         { "data": "change7d",
             "render": function( data, type, row ) {
               if ( data > 0 ) { return '<img src="img/up.png" height="14" width="14"></img> ' + (data) + '% ';
               } else {

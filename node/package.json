@@ -1,0 +1,31 @@
+{
+  "name": "CoinMarketCapAPISite",
+  "version": "1.0.0",
+  "description": "node.js web site scraping for coinmarketcap",
+  "main": "update",
+  "dependencies": {
+    "request": "2.58.0",
+    "cheerio": "0.19.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node update"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nrpatten/CoinMarketCapAPISite.git"
+  },
+  "author": "NRPatten",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nrpatten/CoinMarketCapAPISite/issues"
+  },
+  "homepage": "https://github.com/nrpatten/CoinMarketCapAPISite",
+  "keywords": [
+    "altcoin",
+    "bitcoin",
+    "litecoin",
+    "altcoin"
+  ]
+}
