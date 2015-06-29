@@ -6,9 +6,9 @@ class all_coin_market_cap_data {
     
     public $number_cleanup_regex = "/[^-e\.0-9]+/";
 
-    public function market_cap_data ($top = 590) {
+    public function market_cap_data ($top = 650) {
         // This is the source of our data below
-        $html = file_get_html($this->coin_market_cap_url . 'all.html');
+        $html = file_get_html($this->coin_market_cap_url . 'all/views/all/');
 
         // This variable is where we will store all of the coins.
         $list_of_coins = array();
