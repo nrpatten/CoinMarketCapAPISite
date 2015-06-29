@@ -62,7 +62,7 @@ function currencyDictionary(item) {
 }
 
 function writeData() {
-    dataDir = "/var/www/new/json/";
+    dataDir = "/var/www/coinmarketcap/json/";
     callback = function(error) {
       if (error) {
         console.log(error);
@@ -77,7 +77,7 @@ function writeData() {
 }
 
 function writeAll() {
-    dataDir = "/var/www/new/json/";
+    dataDir = "/var/www/coinmarketcap/json/";
     callback = function(error) {
       if (error) {
         console.log(error);
