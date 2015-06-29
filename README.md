@@ -8,7 +8,7 @@
  * Bootstrap Style with Pagination and Search.
  * Print or Copy and Download as CSV, Excel, PDF.
 
-Note PHP5 must be used to run PHP Simple html Dom.
+* Note PHP5 must be used to run PHP Simple html Dom.
 
 Setup:
 
@@ -16,7 +16,11 @@ Setup:
 
 `git clone https://github.com/nrpatten/CoinMarketCapAPISite.git coinmarketcap`
 
-`cd coinmarketcap/json`
+`cd coinmarketcap`
+
+`git checkout dev-next`
+
+`cd json`
 
 `chmod +x check.sh`
 
